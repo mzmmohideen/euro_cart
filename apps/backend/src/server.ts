@@ -31,6 +31,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/cart', cartRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
 
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
