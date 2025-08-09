@@ -3,6 +3,8 @@ import { connectDB } from "./config/db";
 import authRoutes from "./routes/authRoutes";
 import productRoutes from "./routes/productRoutes";
 import cors from "cors";
+const userRoutes = require('./routes/userRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,6 +27,8 @@ app.get("/", (req, res) => {
   res.send("Euro Cart API is running");
 });
 
+app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
