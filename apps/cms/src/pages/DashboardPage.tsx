@@ -162,13 +162,13 @@ const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
-          <Button
+          {/* <Button
             sx={{ right: "2px", mr: 1 }}
             variant="contained"
             onClick={() => setCategoryModalOpen(true)}
           >
             Add Category
-          </Button>
+          </Button> */}
           <Button variant="contained" startIcon={<AddIcon />} onClick={handleOpen}>
             Add Product
           </Button>
