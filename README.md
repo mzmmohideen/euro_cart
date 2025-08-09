@@ -1,6 +1,30 @@
-# Euro Cart 
+# Euro Cart - Hacthon eCommerce B2B Application
 
-Euro Cart is B2B Ecommerce Website. Which includes,
+A modern, scalable, and feature-rich Hacthon eCommerce web application built to deliver seamless B2B application. This project includes user authentication, product browsing, cart management, order processing, and admin controls.
+
+## Features
+
+- User Authentication (Sign Up, Login)
+- Product Catalog with Categories and Filters
+- Search Functionality
+- Shopping Cart and Wishlist
+- Secure Checkout
+- Order Management
+- Admin Dashboard for Product and Order Management
+- Responsive Design for Mobile and Desktop
+
+## Tech Stack
+
+| Layer         | Technology                         |
+|--------------|-------------------------------------|
+| Frontend     | React
+| Backend      | Node.js + Express
+| Database     | MongoDB
+| Authentication | OAuth2
+| Payment      | Business recommendation
+| Deployment   | Local
+
+Which includes,
 
  - Admin Dashboard (CMS)
  - End Business User Application
@@ -68,9 +92,47 @@ Admin dashboard for managing products and categories with admin authentication.
 
 ---
 
-### Backend Setup
+### Application Setup
 
-1. Navigate to the backend folder:
+2. Install dependencies:
 
 ```bash
-cd backend
+yarn install```
+
+3. Create a .env file in project Root with:
+```ini
+PORT=5000
+MONGO_URI=mongo_connection_string
+JWT_SECRET=jwt_secret_key
+SALT_ROUNDS=10
+```
+
+4. Run the Application Service:
+```bash
+yarn start
+```
+The backend API server will run at http://localhost:5000
+The frontend Application server will run at http://localhost:5173
+The CMS Application will run at http://localhost:5174
+
+## API Endpoints
+
+# Auth
+
+| Method | Endpoint        | Description         | Request Body                    |
+| ------ | --------------- | ------------------- | ------------------------------- |
+| POST   | `/api/register` | Register a new user | `{ username, email, password }` |
+| POST   | `/api/login`    | Login and get token | `{ email, password }`           |
+
+# Product
+
+| Method | Endpoint            | Description          | Request Body                                       |
+| ------ | ------------------- | -------------------- | -------------------------------------------------- |
+| GET    | `/api/products`     | Get all products     | —                                                  |
+| POST   | `/api/products`     | Add new product      | `{ name, price, description, category, imageUrl }` |
+| PUT    | `/api/products/:id` | Update product by id | `{ name, price, description, category, imageUrl }` |
+| DELETE | `/api/products/:id` | Delete product by id | —                                                  |
+
+## License
+
+- HCL Euro Cart © 2025
