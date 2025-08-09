@@ -1,0 +1,70 @@
+{
+  "hash": "f53c940b",
+  "configHash": "8663cfd5",
+  "lockfileHash": "a06c6780",
+  "browserHash": "03eadd4e",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "e07c4f2b",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "e1f1dcb8",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ce71832b",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "02fcaa7b",
+      "needsInterop": false
+    },
+    "@mui/material": {
+      "src": "../../../../node_modules/@mui/material/esm/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "5ac6c6ef",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Add": {
+      "src": "../../../../node_modules/@mui/icons-material/esm/Add.js",
+      "file": "@mui_icons-material_Add.js",
+      "fileHash": "a9fae6b6",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Edit": {
+      "src": "../../../../node_modules/@mui/icons-material/esm/Edit.js",
+      "file": "@mui_icons-material_Edit.js",
+      "fileHash": "ec3521f6",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Settings": {
+      "src": "../../../../node_modules/@mui/icons-material/esm/Settings.js",
+      "file": "@mui_icons-material_Settings.js",
+      "fileHash": "632c0a29",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-5IY6GFY7": {
+      "file": "chunk-5IY6GFY7.js"
+    },
+    "chunk-TJQ5SMJY": {
+      "file": "chunk-TJQ5SMJY.js"
+    },
+    "chunk-2KNNCZQY": {
+      "file": "chunk-2KNNCZQY.js"
+    },
+    "chunk-BNDLILM2": {
+      "file": "chunk-BNDLILM2.js"
+    }
+  }
+}

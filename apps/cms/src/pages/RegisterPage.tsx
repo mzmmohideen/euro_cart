@@ -57,7 +57,7 @@ export default function RegisterPage() {
         onChange={(e) => setRole(e.target.value)}
         style={{ width: "100%", marginBottom: 12, padding: 8 }}
       >
-        <option value="user">User</option>
+        {/* <option value="user">User</option> */}
         <option value="admin">Admin</option>
       </select>
 
