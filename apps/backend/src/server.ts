@@ -6,6 +6,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 const userRoutes = require('./routes/userRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,7 @@ app.get("/", (_, res) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
 
 mongoose.connect(process.env.MONGO_URI as string)
   .then(() => console.log("MongoDB connected"))
