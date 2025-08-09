@@ -1,8 +1,13 @@
 {
   "name": "euro_cart",
+  "private": true,
   "version": "1.0.0",
   "description": "HCL Hackathon Project to Build B2B Ecommerce using MERN Stack",
   "main": "index.js",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend dev\" \"yarn workspace cms dev\"",
@@ -23,5 +28,8 @@
   "homepage": "https://github.com/mzmmohideen/euro_cart#readme",
   "devDependencies": {
     "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.10"
   }
 }
