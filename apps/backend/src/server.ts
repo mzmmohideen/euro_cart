@@ -1,22 +1,37 @@
-import dotenv from "dotenv";
-import path from "path";
-dotenv.config({ path: path.resolve(__dirname, "../../../.env") });
-
 import express from "express";
-import mongoose from "mongoose";
+import { connectDB } from "./config/db";
+import authRoutes from "./routes/authRoutes";
+import productRoutes from "./routes/productRoutes";
 import cors from "cors";
+const userRoutes = require('./routes/userRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 const app = express();
-app.use(cors());
+const PORT = process.env.PORT || 5000;
+
+// Enable CORS before routes
+app.use(cors({
+  origin: "http://localhost:5174", // Allow frontend dev server
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
+
+// Middleware to parse JSON
 app.use(express.json());
 
-app.get("/", (_, res) => {
-  res.json({ message: "Euro Cart API running" });
+// Connect to DB
+connectDB();
+
+// Routes
+app.get("/", (req, res) => {
+  res.send("Euro Cart API is running");
 });
 
-mongoose.connect(process.env.MONGO_URI as string)
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error(err));
+app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Backend running on port ${PORT}`);
+});
